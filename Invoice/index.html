@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="invoice-container" id="invoice">
+    <!-- Invoice Header -->
+    <div class="invoice-header">
+      <h1 id="invoiceTitle"></h1>
+    </div>
+
+    <!-- Invoice Details -->
+    <div class="invoice-details">
+      <table>
+        <tbody>
+          <tr>
+            <th>Invoice Number:</th>
+            <td id="invoiceNumber"></td>
+          </tr>
+          <tr>
+            <th>Date:</th>
+            <td id="invoiceDate"></td>
+          </tr>
+          <tr>
+            <th>Due Date:</th>
+            <td id="invoiceDueDate"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Client Information -->
+    <div class="client-info">
+      <h2>Bill To:</h2>
+      <p id="clientName"></p>
+      <p id="clientAddress"></p>
+    </div>
+
+    <!-- Items Table -->
+    <div class="items">
+      <table class="items-table">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody id="itemsBody">
+          <!-- Dynamic Invoice Items Will Be Injected Here -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Grand Total -->
+    <div class="total" id="grandTotal">
+      Grand Total: $0.00
+    </div>
+
+    <!-- Notes -->
+    <div class="notes">
+      <h3>Notes:</h3>
+      <p id="invoiceNotes"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

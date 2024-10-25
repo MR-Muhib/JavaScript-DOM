@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="content">
+        <h1 id="heading">Hello From Interactive Cares...</h1>
+        <p class="text">Welcome to our DOM Class</p>
+        <p class="text">Today we are going to learn about DOM</p>
+        <p class="text">DOM stands for Document Object Model</p>
+    </section>
+    <p id="footer">Copyright</p>
+    <div>Hello Hello</div>
+    <button style="margin-top:10px;" id="click">Make Bold</button>
+
+    <script>
+
+        const button = document.getElementById('click')
+        button.addEventListener('click', function () {
+            // const paragraphs = document.getElementsByTagName('p')
+            // console.log(paragraphs)
+            // paragraphs[1].remove()
+
+            const paragraphs = document.getElementsByTagName('p')
+            for(let i=0 ; i < paragraphs.length; i++){
+                // paragraphs[i].innerHTML = "<strong>"+paragraphs[i].innerHTML+"</strong>";
+                paragraphs[i].innerHTML = `<strong>${paragraphs[i].innerHTML}</strong>`;
+
+            }
+
+            button.innerText = "Make Normal"
+            
+
+        })
+
+    </script>
+</body>
+
+</html>
